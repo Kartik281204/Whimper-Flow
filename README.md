@@ -95,6 +95,4 @@ and `crates/whimpr-llm-worker/Cargo.toml` for anyone wanting to pick that up.
 - **Proof of concept.** Rushed, under-tested, and missing plenty (auto-learn is macOS-only and conservative, no installer/notarization/signing pipeline on either OS, error handling is thin). Contributions and fixes welcome.
 - **Privacy.** ASR and default cleanup run on-device. Cloud cleanup is opt-in and only sends the transcript (not audio) to the provider you choose. API keys never touch disk in plaintext.
 
-## License
 
-MIT — see [LICENSE](LICENSE).
