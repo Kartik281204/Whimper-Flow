@@ -1,0 +1,33 @@
+# WhimprFlow — Cargo workspace root.
+# Members are added as each crate is scaffolded (a workspace may only list dirs that exist).
+[workspace]
+resolver = "2"
+members = [
+    "crates/whimpr-ipc",
+    "crates/whimpr-core",
+    "crates/whimpr-audio",
+    "crates/whimpr-asr",
+    "crates/whimpr-cleanup",
+    "crates/whimpr-llm-worker",
+    "crates/whimpr-sidecar",
+    "src-tauri",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.82"
+license = "MIT"
+authors = ["WhimprFlow"]
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1.0.95"
+thiserror = "1"
+tracing = "0.1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
